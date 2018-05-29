@@ -12,6 +12,7 @@ import { AuthService } from './services/auth.service';
 import { HeaderComponent } from './components/header/header.component';
 
 // views
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { HomeComponent } from './views/home/home.component';
 import { AuthUrlComponent } from './views/auth-url/auth-url.component';
 import { AuthLoginComponent } from './views/auth-login/auth-login.component';
@@ -21,6 +22,7 @@ import { AuthLoginComponent } from './views/auth-login/auth-login.component';
   declarations: [
     AppComponent,
     HeaderComponent,
+    PageNotFoundComponent,
     HomeComponent,
     AuthUrlComponent,
     AuthLoginComponent
