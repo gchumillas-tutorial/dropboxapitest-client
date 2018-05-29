@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -11,4 +12,8 @@ export class HeaderComponent {
 
   @Output()
   logout = new EventEmitter();
+
+  get env() {
+    return environment;
+  }
 }
