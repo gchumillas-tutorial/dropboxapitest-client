@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
 
 // components
+import { HeaderComponent } from './components/header/header.component';
+
+// views
 import { HomeComponent } from './views/home/home.component';
 import { AuthUrlComponent } from './views/auth-url/auth-url.component';
 import { AuthLoginComponent } from './views/auth-login/auth-login.component';
@@ -17,6 +20,7 @@ import { AuthLoginComponent } from './views/auth-login/auth-login.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     HomeComponent,
     AuthUrlComponent,
     AuthLoginComponent

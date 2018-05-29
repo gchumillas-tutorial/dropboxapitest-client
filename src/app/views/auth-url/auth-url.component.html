@@ -1,4 +1,5 @@
 <div class="container">
+  <app-header [showLogoutButton]="false" (logout)="logout()"></app-header>
   <div class="body">
     <p><a [href]="authUrl">Access with Dropbox Account</a></p>
   </div>
