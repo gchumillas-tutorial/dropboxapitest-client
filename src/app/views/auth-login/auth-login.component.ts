@@ -19,7 +19,10 @@ export class AuthLoginComponent implements OnInit {
     const state = params['state'];
     const code = params['code'];
 
-    await this._authService.login(state, code);
+    if (state && code) {
+      await this._authService.login(state, code);
+    }
+
     this._router.navigate(['/home']);
   }
 }

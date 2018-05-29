@@ -1,0 +1,14 @@
+@import 'assets/palette';
+
+body {
+  margin: 0;
+}
+
+a {
+  color: $primary-text-color;
+  cursor: pointer;
+}
+
+.body {
+  margin: 16px;
+}
