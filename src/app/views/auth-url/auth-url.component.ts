@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -9,9 +10,14 @@ import { AuthService } from '../../services/auth.service';
 export class AuthUrlComponent implements OnInit {
   authUrl: string;
 
-  constructor(private _authService: AuthService) { }
+  constructor(private _router: Router, private _authService: AuthService) { }
 
   async ngOnInit() {
+    if (await this._authService.isLogged()) {
+      this._router.navigate(['/home']);
+      return;
+    }
+
     this.authUrl = await this._authService.authUrl();
   }
 }

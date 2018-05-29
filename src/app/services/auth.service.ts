@@ -23,4 +23,19 @@ export class AuthService {
       { withCredentials: true, params }
     ).toPromise();
   }
+
+  async isLogged() {
+    return await this._http.get<boolean>(
+      `${env.apiUrl}/auth-logged`,
+      { withCredentials: true }
+    ).toPromise();
+  }
+
+  async logout() {
+    return await this._http.post<null>(
+      `${env.apiUrl}/auth-logout`,
+      null,
+      { withCredentials: true }
+    ).toPromise();
+  }
 }
